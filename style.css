@@ -1,0 +1,94 @@
+body {
+  background-color: DCE3E4;
+  color: 424B54;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+p {
+  font-weight: 100;
+}
+
+a {
+  color: 090A0B;
+  text-decoration: none;
+
+}
+
+a:hover {
+  background-color: CCCCCC;
+  color : black;
+}
+
+p {
+  margin : 30px;
+}
+
+.container {
+  width: 500px;   /* This sets the width */
+  margin: 0 auto; /* This automatically sets left/right margins */
+  text-align: center;
+}
+
+.card-white {
+  background-color: F3F6F6;
+  border-radius: 5px;
+  box-shadow: 3px 1px 1px 373D43;
+  padding: 30px;
+  margin: 20px 0px;
+}
+
+.btn-grey {
+  background-color: 292929;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.card-social {
+  background-color: F3F6F6;
+  border-radius: 5px;
+  box-shadow: 3px 1px 1px 373D43;
+  padding: 8px
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 30px;
+}
+
+#img-circle {
+  border-radius: 50%;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
