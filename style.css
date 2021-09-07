@@ -26,11 +26,11 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-size: 40px;
 }
 
 h2 {
-  font-weight: 200;
+  font-weight: 300;
 }
 
 p {
@@ -39,6 +39,10 @@ p {
 
 #logo-point{
   color: grey;
+}
+
+a {
+  color: #434B54;
 }
 
 
@@ -66,14 +70,7 @@ p {
   text-rendering: optimizeLegibility;
 }
 
-/*body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--color-black);
-  background: var(--color-white);
-}*/
+
 
 a,button {
   font-family: inherit;
@@ -103,6 +100,8 @@ img, video {
   position: fixed;
   top: 0;
   background-color: white;
+  z-index: 2;
+  box-shadow: 0px 7px 10px -15px  black;
 }
 
 .brand-link {
@@ -126,8 +125,8 @@ img, video {
   outline: none;
   color: var(--color-black);
   background: white;
-  box-shadow: var(--shadow-large);
 }
+
 .navbar .wrapper {
   display: flex;
   flex-direction: row;
@@ -136,8 +135,10 @@ img, video {
   align-items: center;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: 10 auto 10 ;
+  z-index: 100;
 }
+
 .navbar .burger {
   position: relative;
   display: none;
@@ -152,6 +153,7 @@ img, video {
   transform: rotate(0deg);
   transition: 0.35s ease-in-out;
 }
+
 .navbar .burger-line {
   display: block;
   position: absolute;
@@ -216,6 +218,7 @@ img, video {
     opacity: 1;
     visibility: visible;
   }
+
   .navbar .menu {
     width: 100%;
     max-height: 0rem;
@@ -242,8 +245,26 @@ img, video {
 
 
 section {
-  height: 70vh;
+  height: 90vh;
   scroll-snap-align: center;
+}
+
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.profile-picture {
+  grid-area: 1 / 1 / 2 / 3;
+  display: contents;
+}
+.profile-text {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: auto;
 }
 
 /* Other styles */
@@ -252,7 +273,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkorchid;
+  background-color: #F4FFE8;
+  position: relative;
 }
 
 section:nth-child(2n) {
@@ -263,63 +285,42 @@ section:nth-child(3n) {
   background-color: tomato;
 }
 
-.card-white {
-  background-color: F3F6F6;
-  border-radius: 5px;
-  box-shadow: 3px 1px 1px 373D43;
-  padding: 30px;
-  margin: 20px 0px;
-}
 
-.btn-grey {
-  background-color: 292929;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-}
-
-.card-social {
-  background-color: F3F6F6;
-  border-radius: 5px;
-  box-shadow: 3px 1px 1px 373D43;
-  padding: 8px
-}
-
-#card-experiences {
-  height: 100vh;
-  background-color:  red;
-}
-
-.list-inline {
+.social-icons {
   list-style: none;
-  padding-left: 0px;
+  margin-top: 20px;
 }
 
-.list-inline > li {
+.social-icons > li {
   display: inline-block;
-  padding: 0px 20px;
+  margin: 5px;
   font-size: 30px;
 }
 
-#img-circle {
-  border-radius: 50%;
+.social-link {
+  text-decoration: none;
+  color: #434B54;
+  transition: transform 0.2s ease-out;
 }
 
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
-  .container {
-    width: 700px;
-  }
+.social-link:hover {
+  color: red;
+  transform: scale(1.2);
 }
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
+
+
+
+#img-circle {
+  border-radius: 50%;
+ /* position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);*/
+  width: 180px;
+  margin: auto;
 }
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
-  .container {
-    width: 300px;
-  }
-}
+
+
+
+
+
