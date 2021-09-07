@@ -1,10 +1,8 @@
 
-
+// Initialize Responsive Navbar Menu
 const burgerMenu = document.getElementById("burger");
 const navbarMenu = document.getElementById("menu");
 
-
-// Initialize Responsive Navbar Menu
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
   navbarMenu.classList.toggle("active");
@@ -16,14 +14,27 @@ burgerMenu.addEventListener("click", () => {
   }
 });
 
+// Menu Active
 const linkMenu = document.querySelectorAll(".menu-link");
 const linkMenuLength = linkMenu.length;
-
 
 linkMenu.forEach(element => element.addEventListener("click", (e) => {
   linkMenu.forEach(element => element.classList.remove("active"));
   e.target.classList.add("active");
 }));
 
+// Add animation
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('appear');
+    }
+  });
+});
 
-console.log(linkMenu)
+eachEvents = document.querySelectorAll('.each-event');
+eachEvents.forEach(eachEvent => observer.observe(eachEvent));
+
