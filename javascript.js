@@ -38,3 +38,11 @@ const observer = new IntersectionObserver(entries => {
 eachEvents = document.querySelectorAll('.each-event');
 eachEvents.forEach(eachEvent => observer.observe(eachEvent));
 
+
+
+const wagon = document.getElementById('wagon')
+
+wagon.addEventListener("click", (e) => {
+  e.target.innerText +=
+});
+
