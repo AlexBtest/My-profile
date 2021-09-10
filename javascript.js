@@ -40,9 +40,9 @@ eachEvents.forEach(eachEvent => observer.observe(eachEvent));
 
 
 
-const wagon = document.getElementById('wagon')
+// const wagon = document.getElementById('wagon')
 
-wagon.addEventListener("click", (e) => {
-  e.target.innerText +=
-});
+// wagon.addEventListener("click", (e) => {
+//   e.target.innerText +=
+// });
 
