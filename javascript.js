@@ -20,11 +20,10 @@ const linkMenuLength = linkMenu.length;
 
 linkMenu.forEach(element => element.addEventListener("click", (e) => {
   linkMenu.forEach(element => element.classList.remove("active"));
-  e.target.classList.add("active");
-  console.log("ok");
-  burgerMenu.classList.remove('active');
-  navbarMenu.classList.remove('active');
-  navbarMenu.removeAttribute("style");
+    e.target.classList.add("active");
+    burgerMenu.classList.remove('active');
+    navbarMenu.classList.remove('active');
+    navbarMenu.removeAttribute("style");
 }));
 
 // // Add animation
