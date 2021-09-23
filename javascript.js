@@ -2,10 +2,12 @@
 // Initialize Responsive Navbar Menu
 const burgerMenu = document.getElementById("burger");
 const navbarMenu = document.getElementById("menu");
+const container = document.querySelector(".container");
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
   navbarMenu.classList.toggle("active");
+  container.classList.toggle('transparent');
 
   if (navbarMenu.classList.contains("active")) {
     navbarMenu.style.maxHeight = navbarMenu.scrollHeight + "px";
